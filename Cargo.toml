@@ -4,5 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+arrayvec = "0.7.6"
+branches = "0.1.3"
 iterator_ilp = "2.1.2"
 radsort = "0.1.1"
