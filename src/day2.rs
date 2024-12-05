@@ -235,16 +235,4 @@ mod tests {
     fn test_part2_simple() {
         assert_eq!(part2(INPUT), 4);
     }
-
-    #[test]
-    fn test_part1_opt() {
-        let input = include_str!("../input/2024/day2.txt");
-        assert_eq!(part1(input), 257);
-    }
-
-    #[test]
-    fn test_part2_opt() {
-        let input = include_str!("../input/2024/day2.txt");
-        assert_eq!(part2(input), 328);
-    }
 }

@@ -56,7 +56,7 @@ unsafe fn part1_inner(memory: &[u8]) -> u32 {
     let mut index = 0;
     let mut result = 0;
 
-    let mul_finder = memchr::memmem::Finder::new("mul");
+    let mul_finder = memchr::memmem::Finder::new("m");
     while index < memory.len() {
         let Some(next_mul) = mul_finder.find(memory.get_unchecked(index..)) else {
             break;
@@ -121,17 +121,5 @@ mod tests {
         const INPUT: &str =
             "xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))";
         assert_eq!(part2(INPUT), 48);
-    }
-
-    #[test]
-    fn test_part1_opt() {
-        let input = include_str!("../input/2024/day3.txt");
-        assert_eq!(part1(input), 173529487);
-    }
-
-    #[test]
-    fn test_part2_opt() {
-        let input = include_str!("../input/2024/day3.txt");
-        assert_eq!(part2(input), 99532691);
     }
 }

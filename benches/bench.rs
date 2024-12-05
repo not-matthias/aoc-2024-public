@@ -1,7 +1,7 @@
-use aoc_2024_public::day3::{part1, part2};
+use aoc_2024_public::day4::{part1, part2};
 use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
-const INPUT: &str = include_str!("../input/2024/day3.txt");
+const INPUT: &str = include_str!("../input/2024/day4.txt");
 
 fn bench_part1(c: &mut Criterion) {
     c.bench_function("part1", |b| {

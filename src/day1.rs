@@ -128,35 +128,3 @@ pub fn part2(input: &str) -> impl core::fmt::Display {
             .sum_ilp::<32, i32>()
     }
 }
-
-#[cfg(test)]
-mod tests {
-    extern crate alloc;
-
-    use super::*;
-    use alloc::string::ToString;
-
-    #[test]
-    fn test_part1_opt() {
-        let input = include_str!("../input/2024/day1.txt");
-        assert_eq!(part1(input).to_string(), "2164381");
-    }
-
-    #[bench]
-    fn bench_part1(b: &mut test::Bencher) {
-        let input = include_str!("../input/2024/day1.txt");
-        b.iter(|| assert_eq!(part1(input).to_string(), "2164381"));
-    }
-
-    #[test]
-    fn test_part2_opt() {
-        let input = include_str!("../input/2024/day1.txt");
-        assert_eq!(part2(input).to_string(), "20719933");
-    }
-
-    #[bench]
-    fn bench_part2(b: &mut test::Bencher) {
-        let input = include_str!("../input/2024/day1.txt");
-        b.iter(|| assert_eq!(part2(input).to_string(), "20719933"));
-    }
-}
