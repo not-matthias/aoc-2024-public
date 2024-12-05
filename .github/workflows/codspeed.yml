@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir -p inputs
           for i in {1..25}; do
-            aoc download -I -i inputs/2024/day$i.txt --year 2024 -d $i || true
+            aoc download -I -i inputs/day$i.txt --year 2024 -d $i || true
           done
 
       - name: Test
